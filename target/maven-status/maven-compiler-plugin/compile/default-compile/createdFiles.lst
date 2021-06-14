@@ -1,0 +1,9 @@
+ru\servlets\SubsystemTaskManagerServlet.class
+ru\beans\Stack.class
+ru\enums\Page.class
+ru\beans\SubsystemTaskManager.class
+ru\beans\SubSystemMonitor.class
+ru\beans\Thread.class
+ru\beans\Process.class
+ru\interfaces\ArrayStackInterface.class
+ru\enums\State.class
