@@ -1,0 +1,53 @@
+h1 {
+    color: red;
+}
+/* Таблица */
+tr:hover {
+    opacity: .8;
+    cursor: pointer;
+}
+
+/* Формы */
+.process-form {
+    border: 1px solid #e4e4e4;
+    border-radius: 12px;
+    padding: 10px 16px;
+    margin-bottom: 10px;
+}
+.process-form__add {
+    margin-bottom: 15px;
+}
+input {
+    margin-bottom: 12px;
+}
+
+/* Спиннер */
+.loader {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: none;
+    background-color: #2f2f2f;
+    opacity: .8;
+}
+.loader.show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Кнопки */
+.buttons-wrapper {
+    display: flex;
+}
+.buttons-wrapper.hide {
+    display: none;
+}
+.buttons-wrapper form,
+.edit-btn {
+    margin-right: 12px;
+}
