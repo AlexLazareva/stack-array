@@ -8,7 +8,7 @@ function getSubsystemManagerFields() {
         method: 'GET',
         success: (response) => {
             let systemType = response.systemType;
-            let processes = response.processes.reverse();
+            let processes = response.processes.stackArray.reverse();
 
             $('#systemType').text(systemType);
             createTable(processes);

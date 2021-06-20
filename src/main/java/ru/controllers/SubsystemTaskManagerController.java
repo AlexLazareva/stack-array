@@ -5,7 +5,7 @@ import ru.beans.Process;
 import ru.beans.SubsystemTaskManager;
 
 public class SubsystemTaskManagerController {
-    private static SubsystemTaskManager<Object> subsystemTaskManager = new SubsystemTaskManager<>(10);
+    private static SubsystemTaskManager<Object> subsystemTaskManager = new SubsystemTaskManager<>();
 
     public static String getSubsystemManager() {
         Gson gson = new Gson();
