@@ -29,7 +29,7 @@ function createTable(items) {
             getThreadsState(items[i]) +
             "</td>" +
             "<td>" +
-            '<button class="btn btn-danger" onclick="deleteThread(' + items[i].id +
+            '<button class="btn btn-danger" onclick="deleteThread(' + i +
             ')">-</button>' +
             "</td>" +
             "</tr>";
