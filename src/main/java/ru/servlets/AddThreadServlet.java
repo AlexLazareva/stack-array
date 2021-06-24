@@ -23,7 +23,7 @@ public class AddThreadServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String addType = request.getParameter("threadAddType");
         Process process = SubsystemTaskManagerController.peek();
-        int id  = process.getThreadLinkedList().size() > 0 ? process.getThreadLinkedList().size() : initialID;
+        int id  = process.getThreadList().size() > 0 ? process.getThreadList().size() : initialID;
         Thread thread = new Thread(id, State.NEW.getState());
 
         if (addType != null) {
@@ -33,7 +33,7 @@ public class AddThreadServlet extends HttpServlet {
                 process.addThreadAsLast(thread);
             }
         } else {
-            process.getThreadLinkedList().add(thread);
+            process.addThread(thread);
         }
         response.sendRedirect(request.getContextPath() + "/process-page");
     }

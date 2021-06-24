@@ -1,6 +1,7 @@
 package ru.servlets;
 
 import com.google.gson.Gson;
+import ru.beans.DynamicList;
 import ru.controllers.SubsystemTaskManagerController;
 
 import javax.servlet.ServletException;
@@ -13,13 +14,12 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.nio.charset.StandardCharsets;
-import java.util.LinkedList;
 
 @WebServlet(name = "downloadList", urlPatterns = "/download")
 public class DownloadListServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        LinkedList data = SubsystemTaskManagerController.peek().getThreadLinkedList();
+        DynamicList data = SubsystemTaskManagerController.peek().getThreadList();
         OutputStream outputStream = null;
         Gson gson = new Gson();
         String listData = gson.toJson(data);

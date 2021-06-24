@@ -38,14 +38,21 @@ function createTable(items) {
 }
 
 function getProcessId(item) {
-    return item == null ? "-" : item.processId;
+    return item === null ? "-" : item.processId;
 }
 
 function getProcessName(item) {
-    return item == null ? "пустая ячейка массива" : item.name;
+    return item === null ? "пустая ячейка массива" : item.name;
 }
 
 function getThreadsAmount(item) {
-    return item == null ? "0" : item.threadLinkedList.length;
+    if (item === null) {
+        return "0";
+    } else {
+        if (item.threadList && item.threadList.size) {
+            return item.threadList.size;
+        }
+        return "0";
+    }
 }
 

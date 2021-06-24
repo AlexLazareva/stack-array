@@ -5,11 +5,12 @@ $(document).ready(() => {
         success: (response) => {
             let processName = response.name;
             let processId = response.processId;
-            let threads = response.threadLinkedList;
+            let threads = response.threadList;
+            console.log(threads);
 
             $('#processName').text(processName);
             $('#processId').text(processId);
-            if (threads.length > 0) {
+            if (threads && threads.length > 0) {
                 createTable(threads);
             }
         }

@@ -14,7 +14,7 @@ public class SubsystemTaskManagerController {
 
     public static void push(String processName) {
         try {
-            int processID = subsystemTaskManager.isEmpty() ? 0 : subsystemTaskManager.getHead();
+            int processID = subsystemTaskManager.getHead() + 1;
             Process process = new Process(processID, processName);
 
             if (!subsystemTaskManager.isFull()) {

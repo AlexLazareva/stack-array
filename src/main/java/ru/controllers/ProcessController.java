@@ -12,6 +12,6 @@ public class ProcessController extends SubsystemTaskManagerController {
     }
 
     public static int getThreadListSize() {
-        return process.getThreadLinkedList().size() | 0;
+        return process.getThreadList().size() | 0;
     }
 }

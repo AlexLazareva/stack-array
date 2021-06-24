@@ -1,11 +1,9 @@
 package ru.beans;
 
-import java.util.LinkedList;
-
 public class Process {
     private int processId;
     private String name;
-    private LinkedList<Thread> threadLinkedList = new LinkedList<>();
+    private DynamicList threadList = new DynamicList();
 
     public Process(int processId, String name) {
         this.processId = processId;
@@ -28,34 +26,23 @@ public class Process {
         this.name = name;
     }
 
-    public LinkedList<Thread> getThreadLinkedList() {
-        return threadLinkedList;
+    public DynamicList getThreadList() {
+        return threadList;
     }
 
-    public void setThreadLinkedList(LinkedList<Thread> threadLinkedList) {
-        this.threadLinkedList = threadLinkedList;
-    }
-
-    public int getThreadsListSize() {
-        return threadLinkedList.size();
-    }
     public void addThread(Thread thread) {
-        threadLinkedList.add(thread);
-    }
-
-    public void addThreadByIndex(int index, Thread thread) {
-        this.threadLinkedList.add(index, thread);
+        threadList.add(thread);
     }
 
     public void addThreadAsFirst(Thread thread) {
-        threadLinkedList.addFirst(thread);
+        System.out.println(thread);
     }
 
     public void addThreadAsLast(Thread thread) {
-        threadLinkedList.addLast(thread);
+        System.out.println(thread);
     }
 
     public void removeThread(int id) {
-        this.threadLinkedList.remove(id);
+        threadList.remove(id);
     }
 }

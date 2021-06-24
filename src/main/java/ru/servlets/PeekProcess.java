@@ -3,7 +3,6 @@ package ru.servlets;
 import com.google.gson.Gson;
 import ru.beans.Process;
 import ru.controllers.SubsystemTaskManagerController;
-import ru.enums.Page;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
