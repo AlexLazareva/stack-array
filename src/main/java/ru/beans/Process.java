@@ -35,11 +35,12 @@ public class Process {
     }
 
     public void addThreadAsFirst(Thread thread) {
-        System.out.println(thread);
+        threadList.insertAfter(-1, thread);
     }
 
     public void addThreadAsLast(Thread thread) {
-        System.out.println(thread);
+        int tailIndex = threadList.size();
+        threadList.insertAfter(tailIndex, thread);
     }
 
     public void removeThread(int id) {

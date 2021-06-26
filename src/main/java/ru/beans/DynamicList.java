@@ -130,7 +130,7 @@ public class DynamicList {
             return;
         }
 
-        //Прохожим по элементам до индекса
+        //Проходим по элементам до индекса
         Element p = head;
         for (int i = 0; i <= index; i++) {
             p = p.next;
