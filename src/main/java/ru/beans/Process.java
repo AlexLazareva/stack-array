@@ -43,6 +43,6 @@ public class Process {
     }
 
     public void removeThread(int id) {
-        threadList.remove(id);
+        threadList.removeAt(id);
     }
 }

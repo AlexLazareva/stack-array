@@ -10,7 +10,7 @@ $(document).ready(() => {
 
             $('#processName').text(processName);
             $('#processId').text(processId);
-            if (threads && threads.length > 0) {
+            if (threads) {
                 createTable(threads);
             }
         }
@@ -18,16 +18,20 @@ $(document).ready(() => {
 });
 
 function createTable(items) {
-    for (let i = 0; i < items.length; i++) {
+    let head = items.head.next;
+    let tmp = head;
+    let i = 0;
+
+    while (tmp) {
         let row = "<tr>"+
             '<th scope="row">' +
-            getThreadId(items[i]) +
+            getThreadId(tmp.val) +
             "</th>" +
             "<td>" +
-            getThreadName(items[i]) +
+            getThreadName(tmp.val) +
             "</td>" +
             "<td>" +
-            getThreadsState(items[i]) +
+            getThreadsState(tmp.val) +
             "</td>" +
             "<td>" +
             '<button class="btn btn-danger" onclick="deleteThread(' + i +
@@ -35,6 +39,8 @@ function createTable(items) {
             "</td>" +
             "</tr>";
         $('#table-body').append(row);
+        tmp = tmp.next;
+        i++;
     }
 }
 

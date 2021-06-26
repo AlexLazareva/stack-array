@@ -148,27 +148,6 @@ public class DynamicList {
         size++;
     }
 
-
-    public void remove(int a) {
-        //Удаление первого элемента с данным значением
-        Element p = head;
-        while (p.next != null) {
-            if (p.next.val.equals(a)) {
-                //Если удаляем последний элемент, устанавливаем новый tail
-                if (p.next == tail)
-                    tail = p;
-                //Было p -> a -> c
-                //Стало p -> c; a -> c
-                //Сборщик мусора удалит a
-                p.next = p.next.next;
-                size--;
-                break;
-            }
-            //Если элемент с нужным значением пока не найден - смотрим следующий
-            p = p.next;
-        }
-    }
-
     public int size() {
         return size;
     }
