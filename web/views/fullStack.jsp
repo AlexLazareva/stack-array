@@ -10,6 +10,7 @@
 <body>
 <div class="container container-fluid">
     <h1>Стек заполнен</h1>
+    <p>Добавление элементов невозможно. Чтобы добавить в стек новый элемент, удалите из него хотя бы один имееющийся.</p>
     <form action="${pageContext.request.contextPath}/subsystem-task-manager" method="post">
         <button class="btn btn-success" type="submit">Вернуться на страницу</button>
     </form>

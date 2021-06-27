@@ -68,3 +68,23 @@ function deleteThread(id) {
         }
     });
 }
+
+function downloadThread(path) {
+    $.ajax({
+        url: path + '/download',
+        method: 'POST',
+        success: () => {
+            alert("Файл выгружен");
+        }
+    });
+}
+
+function uploadThread(path) {
+    $.ajax({
+        url: path + '/upload',
+        method: 'POST',
+        success: () => {
+            alert("Файл загружен");
+        }
+    });
+}

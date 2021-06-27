@@ -46,12 +46,8 @@
         </tbody>
     </table>
     <div class="buttons-wrapper">
-        <form action="${pageContext.request.contextPath}/download" method="post">
-            <button class="btn btn-success" type="submit">Выгрузить в файл</button>
-        </form>
-        <form action="${pageContext.request.contextPath}/upload" method="post">
-            <button class="btn btn-success" type="submit">Загрузить из файла</button>
-        </form>
+            <button class="btn btn-success" onclick="downloadThread('${pageContext.request.contextPath}')">Выгрузить в файл</button>
+            <button class="btn btn-success" onclick="uploadThread('${pageContext.request.contextPath}')">Загрузить из файла</button>
     </div>
 </div>
 <script src="${pageContext.servletContext.contextPath}/assets/libs/jquery-3.6.0.min.js" type="text/javascript"></script>

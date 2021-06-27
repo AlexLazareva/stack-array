@@ -1,6 +1,10 @@
 package ru.servlets;
 
-import com.google.gson.JsonParser;
+import com.google.gson.Gson;
+import ru.beans.DynamicList;
+import ru.beans.Process;
+import ru.beans.Thread;
+import ru.controllers.SubsystemTaskManagerController;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -17,13 +21,22 @@ public class UploadServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         StringBuilder stringBuilder = new StringBuilder();
+        Process currentProcess = SubsystemTaskManagerController.peek();
 
-        try(BufferedReader reader = Files.newBufferedReader(Paths.get("C:/Users/User/Desktop/threads.txt"))) {
+
+        try (BufferedReader reader = Files.newBufferedReader(Paths.get("C:/Users/User/Desktop/threads.txt"))) {
             String line;
             while ((line = reader.readLine()) != null) {
                 stringBuilder.append(line).append(System.lineSeparator());
             }
             System.out.println(stringBuilder);
+            Gson gson = new Gson();
+            Process process = gson.fromJson(String.valueOf(stringBuilder), Process.class);
+            DynamicList list = process.getThreadList();
+
+            for (int i = 0; i < list.size(); i++) {
+                currentProcess.addThread(list.get(i));
+            }
 
         } catch (IOException e) {
             e.printStackTrace();

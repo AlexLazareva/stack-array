@@ -2,6 +2,7 @@ package ru.servlets;
 
 import com.google.gson.Gson;
 import ru.beans.DynamicList;
+import ru.beans.Process;
 import ru.controllers.SubsystemTaskManagerController;
 
 import javax.servlet.ServletException;
@@ -19,7 +20,7 @@ import java.nio.charset.StandardCharsets;
 public class DownloadListServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        DynamicList data = SubsystemTaskManagerController.peek().getThreadList();
+        Process data = SubsystemTaskManagerController.peek();
         OutputStream outputStream = null;
         Gson gson = new Gson();
         String listData = gson.toJson(data);
