@@ -44,10 +44,11 @@ input {
 .buttons-wrapper {
     display: flex;
 }
-.buttons-wrapper.hide {
+.hide {
     display: none;
 }
 .buttons-wrapper.btn,
 .edit-btn {
     margin-right: 12px;
 }
+

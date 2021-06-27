@@ -13,6 +13,7 @@ function getSubsystemManagerFields() {
             $('#systemType').text(systemType);
             createTable(processes);
             if (processes[processes.length - 1] !== null) {
+                $('#empty-message').addClass('hide');
                 $('.buttons-wrapper').removeClass('hide');
             }
             $('#loader').removeClass('show');
