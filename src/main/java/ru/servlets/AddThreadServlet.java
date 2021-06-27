@@ -2,13 +2,9 @@ package ru.servlets;
 
 import ru.beans.Process;
 import ru.beans.Thread;
-import ru.controllers.ProcessController;
 import ru.controllers.SubsystemTaskManagerController;
-import ru.enums.Page;
 import ru.enums.State;
 
-import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
