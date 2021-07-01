@@ -1,6 +1,8 @@
 package ru.beans;
 
-public class StackArray {
+import ru.interfaces.ArrayStackInterface;
+
+public class StackArray implements ArrayStackInterface {
     private int head;
     private int maxSize;
     private Process[] stackArray;
@@ -11,6 +13,7 @@ public class StackArray {
         head = -1;
     }
 
+    @Override
     public void push(Process process) {
         stackArray[++head] = process;
     }

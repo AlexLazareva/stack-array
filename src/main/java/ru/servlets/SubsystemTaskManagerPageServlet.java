@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @WebServlet(name = "subsystemTaskManager", urlPatterns = "/subsystem-task-manager")
-public class SubsystemTaskManagerServlet extends HttpServlet {
+public class SubsystemTaskManagerPageServlet extends HttpServlet {
     String page = Page.SUBSYSTEM_TASK_MANAGER_PAGE.getPage();
 
     @Override

@@ -1,9 +1,11 @@
 package ru.interfaces;
 
-public interface ArrayStackInterface<E> {
-    void push(E e);
-    E pop();
-    E peek();
+import ru.beans.Process;
+
+public interface ArrayStackInterface {
+    void push(Process process);
+    Process pop();
+    Process peek();
     int size();
     boolean isEmpty();
     boolean isFull();

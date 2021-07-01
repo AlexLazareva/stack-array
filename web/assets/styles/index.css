@@ -47,7 +47,7 @@ input {
 .hide {
     display: none;
 }
-.buttons-wrapper.btn,
+.buttons-wrapper .btn,
 .edit-btn {
     margin-right: 12px;
 }

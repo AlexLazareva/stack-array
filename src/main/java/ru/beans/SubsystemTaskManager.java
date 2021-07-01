@@ -4,7 +4,7 @@ import ru.interfaces.ArrayStackInterface;
 
 import java.util.ArrayList;
 
-public class SubsystemTaskManager<E> implements ArrayStackInterface<E> {
+public class SubsystemTaskManager implements ArrayStackInterface {
     private String systemType = null;
     private StackArray processes;
 
@@ -20,19 +20,19 @@ public class SubsystemTaskManager<E> implements ArrayStackInterface<E> {
         return systemType;
     }
 
-    @Override
-    public void push(E e) {
-        processes.push((Process) e);
+
+    public void push(Process process) {
+        processes.push((Process) process);
+    }
+
+
+    public Process pop() {
+        return (Process) processes.pop();
     }
 
     @Override
-    public E pop() {
-        return (E) processes.pop();
-    }
-
-    @Override
-    public E peek() {
-        return (E) processes.peek();
+    public Process peek() {
+        return (Process) processes.peek();
     }
 
     @Override

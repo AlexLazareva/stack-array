@@ -1,7 +1,6 @@
 package ru.servlets;
 
 import com.google.gson.Gson;
-import ru.beans.DynamicList;
 import ru.beans.Process;
 import ru.controllers.SubsystemTaskManagerController;
 

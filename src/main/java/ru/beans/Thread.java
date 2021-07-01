@@ -14,7 +14,7 @@ public class Thread {
     }
 
     public void setId(int id) {
-        this.id = id; // Тело метода
+        this.id = id;
     }
 
     public String getState() {
@@ -24,4 +24,4 @@ public class Thread {
     public void setState(String state) {
         this.state = state;
     }
-} // Конец класса
+}

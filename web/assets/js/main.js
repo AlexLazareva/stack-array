@@ -11,6 +11,7 @@ function getSubsystemManagerFields() {
             let processes = response.processes.stackArray.reverse();
 
             $('#systemType').text(systemType);
+            console.log(processes);
             createTable(processes);
             if (processes[processes.length - 1] !== null) {
                 $('#empty-message').addClass('hide');
