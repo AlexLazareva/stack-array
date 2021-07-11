@@ -25,7 +25,7 @@ public class DownloadListServlet extends HttpServlet {
         String listData = gson.toJson(data);
 
         try {
-           outputStream = new FileOutputStream(new File("C:/Users/User/Desktop/threads.txt"));
+           outputStream = new FileOutputStream(new File("../threads.txt"));
            outputStream.write(listData.getBytes(StandardCharsets.UTF_8), 0, listData.length());
         } catch (IOException e) {
             e.printStackTrace();

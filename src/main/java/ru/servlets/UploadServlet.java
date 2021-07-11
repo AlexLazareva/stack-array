@@ -24,7 +24,7 @@ public class UploadServlet extends HttpServlet {
         Process currentProcess = SubsystemTaskManagerController.peek();
 
 
-        try (BufferedReader reader = Files.newBufferedReader(Paths.get("C:/Users/User/Desktop/threads.txt"))) {
+        try (BufferedReader reader = Files.newBufferedReader(Paths.get(".../threads.txt"))) {
             String line;
             while ((line = reader.readLine()) != null) {
                 stringBuilder.append(line).append(System.lineSeparator());
